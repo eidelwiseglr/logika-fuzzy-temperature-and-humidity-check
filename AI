@@ -1,0 +1,340 @@
+#include<iostream>
+using namespace std;
+
+//Main Menu
+int main(){
+float h,t;
+int kondisi;
+float hrs,hr,hs,ht,hts;
+float tds,td,th,tp,tps;
+float a,b,c;
+float r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,r21,r22,r23,r24,r25;
+float dnormal,dlama,dsingkat;
+float durasipenyiraman;
+float terbesarsingkat,terbesarnormal,terbesarlama;
+char ans;
+do
+{
+	cout<<"Besar Humiditi 	: "	; cin>>h;
+	cout<<"Besar Temperatur : " ; cin>>t;
+	cout<<"______________________________________________"<<endl;
+	//keanggotaan fuzzy
+	
+	//------------Humiditi-------------
+	//input humiditi = h = 55
+	// HRS = Humiditi Rendah Sekali
+		if (h < 0 || h >50)
+		{ hrs == 0;
+			cout << "Chrips Humiditi Rendah Sekali  = " << hrs << "" <<endl;}
+		else if (h<=25)
+		{ hrs = (h-0)/(25-0);
+			cout << "Chrips Humiditi Rendah Sekali = " << hrs << "" <<endl;}
+		else
+		{ hrs = (50-h)/(50-25);
+			cout << " Chrips Humiditi Rendah Sekali = " << hrs << "" <<endl;}
+	//_______________________________________________________________________________
+	
+	//HR = Humiditi Rendah
+		if (h < 12.5 || h >62.5)
+		{ hr == 0;
+			cout << "Chrips Humiditi Rendah = " << hr << "" <<endl;}
+		else if (h<=37.5)
+		{ hr = (h-12.5)/(37.5-12.5);
+			cout << "Chrips Humiditi Rendah = " << hr << "" <<endl;}
+		else
+		{ hr = (62.5-h)/(62.5-37.5);
+			cout << "Chrips Humiditi Rendah = " << hr << "" <<endl;}
+			
+	//HS = Humiditi Sedang
+		if (h < 25 || h >75)
+		{ hs == 0;
+			cout << "Chrips Humiditi Sedang = " << hs << "" <<endl;}
+		else if (h<=50)
+		{ hs = (h-25)/(50-25);
+			cout << "Chrips Humiditi Sedang = " << hs << "" <<endl;}
+		else
+		{ hs = (75-h)/(75-50);
+			cout << "Chrips Humiditi Sedang = " << hs << "" <<endl;}
+	//_______________________________________________________________________________
+	
+	//HT = Humiditi Tinggi
+		if (h < 37.5 || h >87.5)
+		{ ht == 0;
+			cout << "Chrips Humiditi Tinggi = " << ht << "" <<endl;}
+		else if (h<=62.5)
+		{ ht = (h-37.5)/(62.5-37.5);
+			cout << "Chrips Humiditi Tinggi = " << ht << "" <<endl;}
+		else
+		{ ht = (87.5-h)/(87.5-62.5);
+			cout << "Chrips Humiditi Tinggi = " << ht << "" <<endl;}
+	//_______________________________________________________________________________
+	
+	//HTS = Humiditi Tinggi Sekali
+		if (h < 50 || h >100)
+		{ hts == 0;
+			cout << "Chrips Humiditi Tinggi Sekali = " << hts <<endl;}
+		else if (h<=75)
+		{ hts = (h-50)/(75-50);
+			cout << "Chrips Humiditi Tinggi Sekali = " << hts <<endl;}
+		else
+		{ hts = (100-h)/(100-75);
+			cout << "Chrips Humiditi Tinggi Sekali = " << hts <<endl;}
+			cout << "__________________________________________" <<endl;
+			
+	//_______________________________________________________________________________
+	//------------Humiditi-------------
+	
+	//------------Temperatur-------------
+	//input Temperatur = t = 30
+	//TDS = Temperatur Dingin Sekali
+		if (t < 0 || t >20)
+		{ tds == 0;
+			cout << "Chrips Temperatur Dingin Sekali = " << tds << ""<<endl;}
+		else if (t<=10)
+		{ tds = (t-0)/(10-0);
+			cout << "Chrips Temperatur Dingin Sekali = " << tds << ""<<endl;}
+		else
+		{ tds = (20-t)/(20-10);
+			cout << "Chrips Temperatur Dingin Sekali = " << tds << ""<<endl;}
+	//_______________________________________________________________________________
+	
+	// TD = Temperatur Dingin
+		if (t < 10 || t >30)
+		{ td == 0;
+			cout << "Chrips Temperatur Dingin = " << td << ""<<endl;}
+		else if (t<=20)
+		{td = (t-10)/(20-10);
+			cout << "Chrips Temperatur Dingin = " << td << ""<<endl;}
+		else
+		{ td = (30-t)/(30-20);
+			cout << "Chrips Temperatur Dingin = " << td << ""<<endl;}
+	//_______________________________________________________________________________
+	
+	// TH = Temperatur Hangat
+		if (t < 20 || t >40)
+		{ th == 0;
+			cout << "Chrips Temperatur Hangat = " << th << ""<<endl;}
+		else if (t<=30)
+		{ th = (t-20)/(30-20);
+			cout << "Chrips Temperatur Hangat = " << th << ""<<endl;}
+		else
+		{ th = (40-t)/(40-20);
+			cout << "Chrips Temperatur Hangat = " << th << ""<<endl;}		
+	//_______________________________________________________________________________
+	
+	// TP = Temperatur Panas
+		if (t < 30 || t >50)
+		{ tp == 0;
+			cout << "Chrips Temperatur Panas = " << tp << ""<<endl;}
+		else if (t<=40)
+		{ tp = (t-30)/(40-30);
+			cout << "Chrips Temperatur Panas = " << tp << ""<<endl;}
+		else 
+		{ tp = (50-t)/(50-40);
+			cout << "Chrips Temperatur Panas = " << tp << ""<<endl;}
+	//_______________________________________________________________________________
+	
+	// TPS = Temperatur Panas Sekali
+		if (t < 40 || t>60)
+		{ tps == 0;
+			cout << "Chrips Temperatur Panas Sekali = " << tps << ""<<endl;}
+		else if (t<=50)
+		{ tps = (t-40)/(50-40);
+			cout << "Chrips Temperatur Panas Sekali = " << tps << ""<<endl;}
+		else 
+		{ tps = (60-t)/(60-50);
+			cout << "Chrips Temperatur Panas Sekali = " << tps << ""<<endl;}
+			cout << "__________________________________________" <<endl;
+		
+	//_______________________________________________________________________________
+	//------------Temperatur-------------
+	
+	//------------Rule-------------	
+	r1 = min (hrs,td);
+	cout << "Nilai Rule 1 = " << r1 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r2 = min (hr,tds);
+	cout << "Nilai Rule 2 = " << r2 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r3 = min (hs,tds);
+	cout << "Nilai Rule 3 = " << r3 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r4 = min (ht,tds);
+	cout << "Nilai Rule 4 = " << r4 <<  " ";
+	cout << "Durasi Penyiraman Singkat" <<endl;
+	
+	r5 = min (hts,tds);
+	cout << "Nilai Rule 5 = " << r5 <<  " ";
+	cout << "Durasi Penyiraman Singkat" <<endl;
+	
+	r6 = min (hrs,td);
+	cout << "Nilai Rule 6 = " << r6 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r7 = min (hr,td);
+	cout << "Nilai Rule 7 = " << r7 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r8 = min (hs,td);
+	cout << "Nilai Rule 8 = " << r8 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r9 = min (ht,td);
+	cout << "Nilai Rule 9 = " << r9 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r10 = min (hts,td);
+	cout << "Nilai Rule 10 = " << r10 <<  " ";
+	cout << "Durasi Penyiraman Singkat" <<endl;
+	
+	r11 = min (hrs,th);
+	cout << "Nilai Rule 11 = " << r11 <<  " ";
+	cout << "Durasi Penyiraman Lama" <<endl;
+	
+	r12 = min (hr,th);
+	cout << "Nilai Rule 12 = " << r12 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r13 = min (hs,th);
+	cout << "Nilai Rule 13 = " << r13 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r14 = min (ht,th);
+	cout << "Nilai Rule 14 = " << r14 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r15 = min (hts,th);
+	cout << "Nilai Rule 15 = " << r15 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r16 = min (hrs,tp);
+	cout << "Nilai Rule 16 = " << r16 <<  " ";
+	cout << "Durasi Penyiraman Lama" <<endl;
+	
+	r17 = min (hr,tp);
+	cout << "Nilai Rule 17 = " << r17 <<  " ";
+	cout << "Durasi Penyiraman Lama" <<endl;
+	
+	r18 = min (hs,tp);
+	cout << "Nilai Rule 18 = " << r18 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r19 = min (ht,tp);
+	cout << "Nilai Rule 19 = " << r19 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r20 = min (hts,tp);
+	cout << "Nilai Rule 20 = " << r20 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r21 = min (hrs,tps);
+	cout << "Nilai Rule 21 = " << r21 <<  " ";
+	cout << "Durasi Penyiraman Lama" <<endl;
+	
+	r22 = min (hr,tps);
+	cout << "Nilai Rule 22 = " << r22 <<  " ";
+	cout << "Durasi Penyiraman Lama" <<endl;
+	
+	r23 = min (hs,tps);
+	cout << "Nilai Rule 23 = " << r23 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r24 = min (ht,tps);
+	cout << "Nilai Rule 24 = " << r24 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	
+	r25 = min (hts,tps);
+	cout << "Nilai Rule 25 = " << r25 <<  " ";
+	cout << "Durasi Penyiraman Normal" <<endl;
+	cout << "__________________________________________" <<endl;
+	
+	//------------Mencari Nilai Crips Durasi-------------
+	
+	cout << "Nilai Crisps Durasi" <<endl;
+	int dsingkat [3] , i ;
+	//dsingkat=[r4,r5,r10];
+	dsingkat [0] = r4 = 10;
+	dsingkat [1] = r5 = 10;
+	dsingkat [2] = r10= 10;
+	//mencari yg terbesar dari nilai pada array
+	terbesarsingkat = dsingkat [0];
+	int numsingkat = 0;
+	for (i = 0; i < 3; i++)
+	{
+		if (numsingkat < dsingkat[i])
+		{
+			numsingkat = dsingkat[i];
+			terbesarsingkat = dsingkat[i];
+		}
+	}
+	cout << "Singkat: " << terbesarsingkat/10 <<endl;
+	
+	int dnormal[16], inormal;
+	//dnormal=max(r1,r2,r3,r6,r7,r8,r9,r12,r13,r14,r15,r18,r19,r20,r24,r25);
+	dnormal [0] = r1 = 10;
+	dnormal [1] = r2 = 10;
+	dnormal [2] = r3 = 10;
+	dnormal [3] = r6 = 10;
+	dnormal [4] = r7 = 10;
+	dnormal [5] = r8 = 10;
+	dnormal [6] = r9 = 10;
+	dnormal [7] = r12 = 10;
+	dnormal [8] = r13 = 10;
+	dnormal [9] = r14 = 10;
+	dnormal [10] = r15 = 10;
+	dnormal [11] = r18 = 10;
+	dnormal [12] = r19 = 10;
+	dnormal [13] = r20 = 10;
+	dnormal [14] = r24 = 10;
+	dnormal [15] = r25 = 10;
+	//mencari yg terbesar dari nilai pada array
+	terbesarnormal = dnormal [0];
+	int numnormal = 0;
+	for (i = 0; i < 16; i++)
+	{
+		if (numnormal < dnormal[i])
+		{
+			numnormal = dnormal[i];
+			terbesarnormal = dnormal[i];
+		}
+	}
+	cout << "Normal: " << terbesarnormal/10 <<endl;
+	
+	int dlama [6], ilama;
+	//dlama=max(r11,r16,r17,r21,r22,r23);
+	dlama [0] = r11 = 10;
+	dlama [1] = r16 = 10;
+	dlama [2] = r17 = 10;
+	dlama [3] = r21 = 10;
+	dlama [4] = r22 = 10;
+	dlama [5] = r23 = 10;
+	
+	//mencari yg terbesar dari nilai pada array
+	terbesarlama = dlama [0];
+	int numlama = 0;
+	for (i = 0; i < 6; i++)
+	{
+		if (numlama < dlama[i])
+		{
+			numlama = dlama[i];
+			terbesarlama = dlama[i];
+		}
+	}
+	cout << "Lama: " << terbesarlama/10 <<endl;
+	
+	//------------Defuzzyfikasi-------------
+	
+	//if (terbesarsingkat > 0.33 terbesarnormal > 0)
+	{durasipenyiraman =  ((10.00*terbesarsingkat)+(20.00*terbesarnormal)+(30.00*terbesarlama))/(terbesarsingkat*terbesarnormal+terbesarlama);
+	}
+	
+	cout<< "Durasi Penyiraman = " << durasipenyiraman << "detik" <<endl;
+	
+	cout<< "Tekan Y/y untuk perhitungan yang lain atau apa saja untuk keluar!";
+	cin>>ans;
+}
+	while (ans== 'y' || ans == 'Y');
+}
